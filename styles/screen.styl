@@ -33,8 +33,8 @@ legend
   min-height 100%
   background-color white
   border 1px solid lightgray
-  width 50em
   margin 0 auto
+  width 100%
 
 img#profile
   width 160px
@@ -44,7 +44,7 @@ img#profile
 .title
   color contrastColor
   font-family 'Josefin Slab', sans-serif
-  font-size 3em
+  font-size 2.5em
   line-height 1
   margin-bottom 2rem
 
@@ -52,7 +52,8 @@ img#profile
   display inline-block
 
 #mce-EMAIL
-  min-width 18em
+  max-width 18em
+  margin-bottom 1em
 
 h2
   margin-bottom 1rem
@@ -75,9 +76,9 @@ hr
 main
   text-align center
   padding-top 1em
-  padding-left 3em
-  padding-bottom 5em
-  padding-right 3em
+  padding-left 1em
+  padding-bottom 4em
+  padding-right 1em
 
 input[type=text],
 input[type=email],
@@ -100,3 +101,12 @@ button,
 input[type=submit]
   background-color slightlyMutedPrimaryColor
   cursor pointer
+
+
+@media screen and (min-width 50em)
+  .wrapper
+    width 50em
+
+  main
+    padding-left 5em
+    padding-right 5em

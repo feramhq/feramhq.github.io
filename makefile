@@ -1,4 +1,5 @@
 # sourcePngs := $(wildcard _source/images/*.png)
+sourcePngs := $(wildcard _source/images/*.png)
 
 all: index.html \
 	styles/screen.css \
@@ -13,15 +14,17 @@ index.html: _source/index.html ./node_modules/html-minifier
 		--output $@
 
 
-styles/screen.css: ./_source/styles/* ./node_modules/stylus | styles
-	./node_modules/.bin/stylus --compress $< --out $@
+styles/screen.css: ./_source/styles/* | styles
+	./node_modules/.bin/stylus $^ \
+		--compress \
+		--out $@
 
-scripts/main.js: ./_source/scripts/* ./node_modules/uglify-js | scripts
-	./node_modules/.bin/uglifyjs \
+scripts/main.js: ./_source/scripts/* | scripts
+	./node_modules/.bin/uglifyjs $^ \
 		--compress \
 		--mangle \
-		--output $@ \
-		$<
+		--output $@
+
 
 images/%.svg: _source/images/%.svg ./node_modules/svgo | images
 	./node_modules/.bin/svgo $< $@

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  viewBox="0 0 80 80"
+  version="1.1">
+
+  <title>Feram Profile Image</title>
+
+  <style>
+
+    #bot .head .face {
+      fill: darkgray;
+      stroke: dimgray;
+      stroke-width: 2;
+    }
+    #bot .head .shadow {
+      fill: rgb(160, 160, 160);
+      stroke: rgb(160, 160, 160);
+      stroke-width: 3;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    #bot .ear {
+      fill: rgb(241, 180, 180);
+      stroke: firebrick;
+      stroke-width: 0.5;
+    }
+
+    #bot .closed-eye {
+      stroke: dimgray;
+      stroke-width: 2;
+      stroke-linecap: round;
+      fill: none;
+    }
+    #bot .iris {
+      stroke: dimgray;
+      fill: lightcyan;
+      filter: drop-shadow(-5px -5px 5px #000);
+    }
+    #bot .pupil {
+      fill: dimgray;
+    }
+
+    #bot .nose {
+      fill: rgb(241, 180, 180);
+      stroke: rgb(226, 105, 105);
+      stroke-linejoin: round;
+      stroke-width: 0.5;
+      box-shadow: 1px 1px 1px black;
+    }
+
+    #bot .lips {
+      stroke: dimgray;
+      stroke-width: 7;
+      stroke-linecap: round;
+      fill: none;
+    }
+    #bot .mouth .teeth {
+      stroke: rgb(230, 230, 230);
+      stroke-width: 6;
+      fill: none;
+    }
+    #bot .mouth #teeth1 {
+      stroke-dasharray: 5,0.4;
+    }
+    #bot .mouth #teeth2 {
+      stroke-linecap: round;
+      stroke-dasharray: 0.4,31;
+    }
+    #bot .antenna .tip {
+      fill: rgb(241, 180, 180);
+      stroke: firebrick;
+      stroke-width: 0.5;
+    }
+    #bot .antenna .pole {
+      stroke: dimgray;
+      stroke-width: 5;
+    }
+  </style>
+
+  <g id="bot" transform="translate(10, 15)">
+
+    <g class="antenna" transform="translate(30,-7)">
+    <line class="pole" y2="8" />
+      <circle class="tip" r="5" />
+    </g>
+
+    <rect class="ear" x="-5" y="20" width="10" height="20" rx="2" />
+    <rect class="ear" x="55" y="20" width="10" height="20" rx="2" />
+    <g class="head">
+      <rect class="face" width="60" height="60" rx="5" ry="5" />
+      <path class="shadow" d="M55,35 v20 h-50 z"/>
+    </g>
+
+    <g class="eyes" transform="translate(0, 25)">
+      <path class="closed-eye" d="M10,0 c2,-4 8,-4 10,0" />
+      <path class="closed-eye" d="M40,0 c2,-4 8,-4 10,0" />
+    </g>
+
+    <!--
+    <g id="left-eye" transform="translate(15, 22)">
+      <circle class="iris" r="6" />
+      <circle class="pupil" cy="3" r="2" />
+    </g>
+    <g id="right-eye" transform="translate(45, 22)">
+      <circle class="iris" r="6" />
+      <circle class="pupil" cy="3" r="2" />
+    </g>
+    -->
+
+    <path class="nose" d="M30,26 l5,12 h-10 z" />
+
+    <g class="mouth" transform="translate(15, 45)">
+      <path class="lips" d="M0,0 c5,5 25,5 30,0" />
+      <path class="teeth" id="teeth1" d="M0,0 c5,5 25,5 30,0" />
+      <path class="teeth" id="teeth2" d="M0,0 c5,5 25,5 30,0" />
+    </g>
+  </g>
+</svg>

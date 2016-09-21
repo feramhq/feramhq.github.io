@@ -1,10 +1,11 @@
 {
-  "name": "ferambot.github.io",
+  "name": "feramhq.github.io",
   "description": "Website for Feram",
   "version": "0.1.0",
   "main": "index.html",
   "scripts": {
-    "start": "stylus --watch styles"
+    "test": "make --always-make",
+    "prepublish": "npm run test"
   },
   "keywords": [
     "feram"
@@ -12,15 +13,19 @@
   "author": "Adrian Sieber",
   "license": "ISC",
   "devDependencies": {
-    "stylus": "^0.54.5"
+    "html-minifier": "^3.0.3",
+    "stylus": "^0.54.5",
+    "svgo": "^0.7.0",
+    "uglify-js": "^2.7.3",
+    "vue-server-renderer": "^2.0.0-rc.6"
   },
-  "dependencies": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/adius/ferambot.github.io.git"
+    "url": "github.com/adius/ferambot.github.io"
   },
   "bugs": {
     "url": "https://github.com/adius/ferambot.github.io/issues"
   },
-  "homepage": "https://github.com/adius/ferambot.github.io#readme"
+  "homepage": "https://github.com/adius/ferambot.github.io#readme",
+  "dependencies": {}
 }

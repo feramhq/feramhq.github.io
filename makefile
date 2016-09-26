@@ -5,7 +5,8 @@ all: index.html \
 	styles/screen.css \
 	scripts/main.js \
 	images/favicon.png \
-	images/profile.svg
+	images/profile.svg\
+	images/logo.svg
 
 index.html: _source/index.html ./node_modules/html-minifier
 	./node_modules/.bin/html-minifier \

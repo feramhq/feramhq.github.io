@@ -40,7 +40,7 @@
     #bot .lips {
       fill: none;
       stroke-linecap: round;
-      stroke-width: 3;
+      stroke-width: 2;
     }
   </style>
 

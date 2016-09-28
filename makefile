@@ -1,18 +1,14 @@
 # sourcePngs := $(wildcard _source/images/*.png)
 sourcePngs := $(wildcard _source/images/*.png)
 
-all: index.html \
-	styles/screen.css \
+all: about/index.html \
+	images/logo.svg \
+	images/profile.svg \
+	imprint/index.html \
+	index.html \
+	pricing/index.html \
 	scripts/main.js \
-	images/favicon.png \
-	images/profile.svg\
-	images/logo.svg
-
-index.html: _source/index.html ./node_modules/html-minifier
-	./node_modules/.bin/html-minifier \
-		--collapse-whitespace \
-		--remove-attribute-quotes $< \
-		--output $@
+	styles/screen.css
 
 
 styles/screen.css: ./_source/styles/* | styles
@@ -26,12 +22,24 @@ scripts/main.js: ./_source/scripts/* | scripts
 		--mangle \
 		--output $@
 
+index.html: _source/index.pug _source/partials/*
+	mkdir -p $(@D)
+	./node_modules/.bin/pug --path $< < $< > $@
+
+%/index.html: _source/%.pug _source/partials/*
+	mkdir -p $(@D)
+	./node_modules/.bin/pug --path $< < $< > $@
+
 
 images/%.svg: _source/images/%.svg ./node_modules/svgo | images
 	./node_modules/.bin/svgo $< $@
 
 images/%.png: _source/images/%.png | images
 	cp $< $@
+
+images/favicon.png: _source/images/logo.svg | images
+	convert -background none $< $@
+
 
 styles:
 	-mkdir ./styles
@@ -44,4 +52,11 @@ images:
 
 .PHONY: clean, all, style-files, image-files
 clean:
-	-rm -r ./index.html ./styles ./scripts ./images
+	-rm -r \
+		./about \
+		./images \
+		./imprint \
+		./index.html \
+		./pricing \
+		./scripts \
+		./styles

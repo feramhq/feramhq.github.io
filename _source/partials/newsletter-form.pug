@@ -1,0 +1,24 @@
+form#mc-embedded-subscribe-form.validate(
+    action='//feram.us13.list-manage.com/subscribe/post?u=8fc44930f132e9100eef5ed8c&id=123e1a98d5'
+    method='post'
+    name='mc-embedded-subscribe-form'
+    target='_blank'
+  )
+  fieldset
+    legend  Sign up to be one of the first to be invited to our private Beta
+    label(for='mce-EMAIL') Email Address
+    input#mce-EMAIL.required.email(
+      type='email' name='EMAIL' placeholder='Email Address'
+      )
+    #mce-responses.clear
+      #mce-error-response.response(style='display:none')
+      #mce-success-response.response(style='display:none')
+    div(style='position: absolute; left: -5000px;' aria-hidden='true')
+      input(
+        type='text'
+        name='b_8fc44930f132e9100eef5ed8c_123e1a98d5'
+        tabindex='-1'
+      )
+    input#mc-embedded-subscribe(
+      type='submit' value='Subscribe' name='subscribe'
+    )

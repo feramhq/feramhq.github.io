@@ -1,0 +1,78 @@
+extends partials/layout.pug
+
+block content
+  h2 Coming Soon!
+  include ./partials/newsletter-form.pug
+
+  hr
+
+  table#comparisonTable
+    caption Pricing
+    thead
+      tr
+        th
+        th Free
+        th Hobby
+        th Pro
+        th Enterprise
+
+    tbody
+      tr.priceRow
+        td Price
+        td: strong 0 €
+        td
+          strong 0.02 €
+          br
+          small / commit
+        td
+          strong 5 €
+          br
+          small / user / month
+        td
+          strong 10 €
+          br
+          small / user / month
+
+      tr
+        td GitHub Integration
+        td ✔
+        td ✔
+        td ✔
+        td ✔
+
+      tr
+        td Private repositories
+        td
+        td ✔
+        td ✔
+        td ✔
+
+      tr
+        td No idle costs
+        td ✔
+        td ✔
+        td
+        td
+
+      tr
+        td Unlimited commits
+        td ✔
+        td
+        td ✔
+        td ✔
+
+      tr
+        td On-premise
+        td
+        td
+        td
+        td ✔
+
+      tr
+        td Dedicated Support
+        td
+        td
+        td
+        td ✔
+
+  p All plans include unlimited repositories.

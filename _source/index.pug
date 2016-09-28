@@ -1,0 +1,13 @@
+extends partials/layout.pug
+
+block content
+  #landingPage
+    img#profile(src='/images/profile.svg' alt='Profile image of Feram')
+    h1.title
+      | &ldquo;Hi, I&apos;m Feram
+      br
+      | &nbsp;and I&apos;m a bot&rdquo;
+
+    p.subtitle I find and fix bugs in git repositories
+
+    include ./partials/newsletter-form.pug

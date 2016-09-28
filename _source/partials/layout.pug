@@ -1,0 +1,34 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    title Feram
+    meta(name='viewport' content='width=device-width, initial-scale=1')
+    link(rel='stylesheet' href='https://fonts.googleapis.com/css?family=Josefin+Slab:600,700')
+    link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css')
+    link(rel='stylesheet' href='/styles/screen.css')
+    link(rel='icon' href='/images/logo.svg' type='image/png')
+    script(src='/scripts/main.js')
+
+  body
+    .wrapper
+      nav
+        a#logo(href='/')
+          img(src='/images/logo.svg' alt='Logo of Feram')
+          span Feram
+        a(href='/about') About
+        //- a(href='/features') Features
+        a(href='/pricing') Pricing
+        a(href='/imprint') Imprint
+        #social-icons
+          a.fa.fa-github.fa-lg(href='https://github.com/feramhq')
+            span GitHub
+          a.fa.fa-twitter.fa-lg(href='https://twitter.com/feramhq')
+            span Twitter
+          a.fa.fa-facebook.fa-lg(href='https://facebook.com/feramhq')
+            span Facebook
+          a.fa.fa-linkedin.fa-lg(href='https://linkedin.com/company/feram.co')
+            span LinkedIn
+
+      main
+        block content

@@ -13,7 +13,7 @@
   "author": "Adrian Sieber",
   "license": "ISC",
   "devDependencies": {
-    "html-minifier": "^3.0.3",
+    "pug-cli": "^1.0.0-alpha6",
     "stylus": "^0.54.5",
     "svgo": "^0.7.0",
     "uglify-js": "^2.7.3",
@@ -26,6 +26,5 @@
   "bugs": {
     "url": "https://github.com/adius/ferambot.github.io/issues"
   },
-  "homepage": "https://github.com/adius/ferambot.github.io#readme",
-  "dependencies": {}
+  "homepage": "https://github.com/adius/ferambot.github.io#readme"
 }

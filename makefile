@@ -4,6 +4,7 @@ sourcePngs := $(wildcard _source/images/*.png)
 all: about/index.html \
 	images/logo.svg \
 	images/profile.svg \
+	images/favicon.png \
 	imprint/index.html \
 	index.html \
 	pricing/index.html \
@@ -37,8 +38,8 @@ images/%.svg: _source/images/%.svg ./node_modules/svgo | images
 images/%.png: _source/images/%.png | images
 	cp $< $@
 
-images/favicon.png: _source/images/logo.svg | images
-	convert -background none $< $@
+# images/favicon.png: _source/images/favicon.png | images
+# 	convert -background none $< $@
 
 
 styles:

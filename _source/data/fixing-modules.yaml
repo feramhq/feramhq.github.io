@@ -1,0 +1,79 @@
+modules:
+  - name: Fix Typos and Spelling Mistakes
+    description: |
+      Fixes the 5000 most common typos and spelling mistakes
+    state: ready
+
+  - name: Fix Custom Typos
+    description: Use additional dictionary generated from project files
+
+  - name: Add missing package file entries
+    description: |
+      Checks <code>package.json</code> files for missing entries and
+      automatically adds them
+    state: ready
+
+  - name: Fix usage of indefinite articles
+    description: No more incorrect usage of "a" and "an"
+    state: ready
+
+  - name: Remove sensitive data
+    description: Removes passwords, private keys and other sensitive data from commits
+
+  - name: Find typos in package names
+    description: |
+      Typosquatting of package names expose a serious security
+      vulnerability which lets an attacker easily acquire root privileges.
+
+  - name: Add missing fields to READMEs
+    description: Shorten the onboarding time for new hires through concise READMEs
+
+  - name: Cleanup datasets
+    description: Recognizes and fixes inconsistencies in datasets
+
+  - name: Fix duplicate entries in hash maps / dictonaries
+    description:
+
+  - name: Optimize images for websites
+    description: Uses optiPNG and jpegtran to optimize images and reduce loading times
+
+  - name: Check casing of file paths
+    description: |
+      As MacOS and Windows are case-sensitive by default,
+      this will only lead to errors when the same code is executed on linux.
+
+  - name: Automatically format stylesheets
+    description:
+
+  - name: Automatically format JavaScript code
+
+  - name: Delete duplicate code
+    description: Would have prevented the Apple GOTO bug
+
+  - name: Replace JS Libraries
+    description: Replace JavaScript libraries with known vulnerabilities
+
+  - name: Convert ES5 to ES2015
+
+  - name: Delete vendor files
+    description: Removes vendor files which should not be included in a git repo
+
+  - name: Add missing project files
+    description: Automaticlly generate and populate common project files
+
+  - name: Fix broken links
+
+  - name: Use path.join()
+    description: Makes code cross-platform compatible
+
+  - name: Add missing dependencies
+    description: Analyzes your code for missing dependencies and adds the necessary requires
+
+  - name: Make executables cross-platform compatible
+    description: |
+      Replace
+      = ' '
+      code /usr/bin/git
+      |  with
+      = ' '
+      code /usr/bin/env git

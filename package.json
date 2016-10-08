@@ -4,6 +4,7 @@
   "version": "0.1.0",
   "main": "index.html",
   "scripts": {
+    "start": "python3 -m http.server; open http://localhost:8000",
     "test": "make --always-make",
     "prepublish": "npm run test"
   },
@@ -26,5 +27,9 @@
   "bugs": {
     "url": "https://github.com/adius/ferambot.github.io/issues"
   },
-  "homepage": "https://github.com/adius/ferambot.github.io#readme"
+  "homepage": "https://github.com/adius/ferambot.github.io#readme",
+  "dependencies": {
+    "js-yaml": "^3.6.1",
+    "pug": "^2.0.0-beta6"
+  }
 }

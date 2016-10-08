@@ -1,0 +1,38 @@
+extends partials/layout.pug
+
+block content
+  main#modules
+    section
+        h2 Modules
+
+        h3 Fixing
+        p.
+          This #{activeFixingModules.length} currently available
+          of #{fixingModules.length} planed fixing modules
+          automatically fix bugs in your code.
+
+        br
+
+        ul
+          for module in fixingModules
+            li(class=module.state)
+              div.checkmark
+              div
+                strong= module.name
+                p= module.description
+
+
+        h3 Warning
+        p.
+          This #{warningModules.length} warning modules help you to easily
+          detect problems early.
+
+        br
+
+        ul
+          for module in warningModules
+            li(class=module.state)
+              img(src=module.image)
+              div
+                strong= module.name
+                p= module.description

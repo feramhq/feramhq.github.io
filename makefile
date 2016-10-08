@@ -5,8 +5,10 @@ all: about/index.html \
 	images/logo.svg \
 	images/profile.svg \
 	images/favicon.png \
+	images/modules \
 	imprint/index.html \
 	index.html \
+	modules/index.html \
 	pricing/index.html \
 	scripts/main.js \
 	styles/screen.css
@@ -31,16 +33,21 @@ index.html: _source/index.pug _source/partials/*
 	mkdir -p $(@D)
 	./node_modules/.bin/pug --path $< < $< > $@
 
+modules/index.html: _source/modules.pug _source/partials/* _source/buildModules.js
+	mkdir -p $(@D)
+	node _source/buildModules.js > $@
 
 images/%.svg: _source/images/%.svg ./node_modules/svgo | images
 	./node_modules/.bin/svgo $< $@
 
 images/%.png: _source/images/%.png | images
-	cp $< $@
+	cp -f $< $@
+
+images/modules: _source/images/modules | images
+	rsync -a $< $(@D)
 
 # images/favicon.png: _source/images/favicon.png | images
 # 	convert -background none $< $@
-
 
 styles:
 	-mkdir ./styles
@@ -58,6 +65,7 @@ clean:
 		./images \
 		./imprint \
 		./index.html \
+		./modules \
 		./pricing \
 		./scripts \
 		./styles

@@ -45,6 +45,7 @@ images/%.png: _source/images/%.png | images
 
 images/modules: _source/images/modules | images
 	rsync -a $< $(@D)
+	cd $@ && optipng -strip all *.png
 
 # images/favicon.png: _source/images/favicon.png | images
 # 	convert -background none $< $@

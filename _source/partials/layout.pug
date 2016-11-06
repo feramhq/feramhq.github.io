@@ -1,11 +1,20 @@
+- let title = 'Feram'
+
 doctype html
 html
+  block vars
   head
     meta(charset='utf-8')
-    title Feram
+    title= title
     meta(name='viewport' content='width=device-width, initial-scale=1')
-    link(rel='stylesheet' href='https://fonts.googleapis.com/css?family=Josefin+Slab:600,700')
-    link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css')
+    link(
+      rel='stylesheet'
+      href='https://fonts.googleapis.com/css?family=Josefin+Slab:600,700'
+    )
+    link(
+      rel='stylesheet'
+      href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css'
+    )
     link(rel='stylesheet' href='/styles/screen.css')
     link(rel='icon' href='/images/logo.svg' type='image/png')
     script(src='/scripts/main.js')
@@ -16,10 +25,32 @@ html
         a#logo(href='/')
           img(src='/images/logo.svg' alt='Logo of Feram')
           span Feram
-        a(href='/about') About
-        //- a(href='/features') Features
-        a(href='/pricing') Pricing
-        a(href='/imprint') Imprint
+
+        a(
+          href='/about'
+          class= active === 'about' ? 'active' : ''
+        ) About
+
+        a(
+          href='/features'
+          class= active === 'features' ? 'active' : ''
+        ) Features
+
+        a(
+          href='/pricing'
+          class= active === 'pricing' ? 'active' : ''
+        ) Pricing
+
+        a(
+          href='/imprint'
+          class= active === 'imprint' ? 'active' : ''
+        ) Imprint
+
+        a(
+          href='/login'
+          class= active === 'login' ? 'active' : ''
+        ) Login
+
         #social-icons
           a.fa.fa-github.fa-lg(href='https://github.com/feramhq')
             span GitHub

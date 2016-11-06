@@ -16,7 +16,7 @@ all: about/index.html \
 
 
 styles/screen.css: ./_source/styles/* | styles
-	./node_modules/.bin/stylus $^ \
+	./node_modules/.bin/stylus ./_source/styles/screen.styl \
 		--compress \
 		--out $@
 

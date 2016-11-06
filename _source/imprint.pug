@@ -1,8 +1,10 @@
 extends partials/layout.pug
 
-block content
-  h1 Imprint
+block vars
+  - title = 'Feram - Imprint'
+  - active = 'imprint'
 
+block content
   h2 Company
   p
     | Feram GbR
@@ -24,7 +26,7 @@ block content
     dt Mail
     dd: a(href='mailto:info@feram.co') info@feram.co
 
-    br 
+    br
 
     dt Mobile
     dd: a(href='tel:+491639860910') +491639860910

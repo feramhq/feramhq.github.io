@@ -46,13 +46,18 @@ nav
     display inline-block
     float right
 
+  .active
+    font-weight 900
+
 h1
   font-size 1.8em
   margin-bottom 1rem
+  border-bottom 1px solid lightgray
 
 h2
   font-size 1.5em
   margin-bottom 1rem
+  border-bottom 1px solid lightgray
 
 p + h2
   margin-top 2em
@@ -78,7 +83,8 @@ main
 input[type=text],
 input[type=email],
 input[type=submit],
-button
+button,
+.button
   border-width 1px
   border-style solid
   border-radius 0.3em
@@ -92,10 +98,12 @@ input[type=email]
   padding-left 1em
   padding-right 1em
 
+input[type=submit],
 button,
-input[type=submit]
+.button
   background-color slightlyMutedBgColor
   cursor pointer
+  text-decoration none
 
 dt
   display inline-block

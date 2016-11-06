@@ -8,7 +8,7 @@ all: about/index.html \
 	images/modules \
 	imprint/index.html \
 	index.html \
-	modules/index.html \
+	features/index.html \
 	pricing/index.html \
 	scripts/main.js \
 	styles/screen.css
@@ -33,7 +33,7 @@ index.html: _source/index.pug _source/partials/*
 	mkdir -p $(@D)
 	./node_modules/.bin/pug --path $< < $< > $@
 
-modules/index.html: _source/modules.pug _source/partials/* _source/buildModules.js
+features/index.html: _source/features.pug _source/partials/* _source/buildModules.js
 	mkdir -p $(@D)
 	node _source/buildModules.js > $@
 
@@ -66,7 +66,7 @@ clean:
 		./images \
 		./imprint \
 		./index.html \
-		./modules \
+		./features \
 		./pricing \
 		./scripts \
 		./styles

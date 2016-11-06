@@ -17,7 +17,7 @@ const warningModules = parseYaml('./data/warning-modules.yaml').modules
 const activeFixingModules = fixingModules.filter(
   module => module.state === 'ready'
 )
-const getModulesHtml = pug.compileFile(path.join(__dirname, 'modules.pug'))
+const getModulesHtml = pug.compileFile(path.join(__dirname, 'features.pug'))
 
 console.log(getModulesHtml({
   fixingModules,

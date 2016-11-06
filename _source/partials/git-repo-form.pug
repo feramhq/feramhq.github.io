@@ -1,0 +1,25 @@
+form#git-repo-form(method='get')
+  fieldset
+    legend
+      | Enter the name of a public git repository
+      br
+      | and I will check if there is anything I can improve:
+    #url-container
+      input(
+        type='text'
+        id='git-url'
+        placeholder='github.com/username/repository'
+      )
+  input(type='submit' value='Find Bugs')
+
+script.
+  document
+    .getElementById('git-repo-form')
+    .addEventListener('submit', function (event) {
+      event.preventDefault()
+      const gitUrl = document.getElementById('git-url').value
+      const endpoint = 'http://localhost:1234/issues'
+      const query = '?repo=' + gitUrl
+      console.log(endpoint + query)
+      window.location.href = endpoint + query
+    })

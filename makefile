@@ -11,6 +11,7 @@ all: about/index.html \
 	features/index.html \
 	pricing/index.html \
 	scripts/main.js \
+	login/index.html \
 	styles/screen.css
 
 
@@ -65,6 +66,7 @@ clean:
 		./about \
 		./images \
 		./imprint \
+		./login \
 		./index.html \
 		./features \
 		./pricing \

@@ -1,0 +1,17 @@
+extends partials/layout.pug
+
+block vars
+  - title = 'Feram - Login'
+  - active = 'login'
+
+block content
+  #login
+    a.button(href='http://localhost:1234/api/auth/github')
+      i.fa.fa-github(aria-hidden)
+      span  Login with GitHub
+
+    br
+
+    a.button(href='http://localhost:1234/api/auth/gitlab')
+      i.fa.fa-gitlab(aria-hidden)
+      span  Login with GitLab

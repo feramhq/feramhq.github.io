@@ -4,7 +4,6 @@ sourcePngs := $(wildcard _source/images/*.png)
 all: about/index.html \
 	images/logo.svg \
 	images/profile.svg \
-	images/favicon.png \
 	images/modules \
 	imprint/index.html \
 	index.html \

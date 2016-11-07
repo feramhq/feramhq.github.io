@@ -1,7 +1,7 @@
 form#git-repo-form(method='get')
   fieldset
     legend
-      | Enter the name of a public git repository
+      | Enter the name of a public GitHub or GitLab repository
       br
       | and I will check if there is anything I can improve:
     #url-container
@@ -18,7 +18,7 @@ script.
     .addEventListener('submit', function (event) {
       event.preventDefault()
       const gitUrl = document.getElementById('git-url').value
-      const endpoint = 'http://localhost:1234/issues'
+      const endpoint = 'http://localhost:1234/#!/issues'
       const query = '?repo=' + gitUrl
       console.log(endpoint + query)
       window.location.href = endpoint + query

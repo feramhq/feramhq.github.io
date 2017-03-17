@@ -1,4 +1,10 @@
-- let title = 'Feram'
+-
+  let title = 'Feram'
+  const features = {
+    featuresPage: false,
+    loginPage: false,
+    repoInputField: false,
+  }
 
 doctype html
 html
@@ -31,10 +37,11 @@ html
           class= active === 'about' ? 'active' : ''
         ) About
 
-        a(
-          href='/features'
-          class= active === 'features' ? 'active' : ''
-        ) Features
+        if features.featuresPage
+          a(
+            href='/features'
+            class= active === 'features' ? 'active' : ''
+          ) Features
 
         a(
           href='/pricing'
@@ -46,10 +53,11 @@ html
           class= active === 'imprint' ? 'active' : ''
         ) Imprint
 
-        a(
-          href='/login'
-          class= active === 'login' ? 'active' : ''
-        ) Login
+        if features.loginPage
+          a(
+            href='/login'
+            class= active === 'login' ? 'active' : ''
+          ) Login
 
         #social-icons
           a.fa.fa-github.fa-lg(href='https://github.com/feramhq')

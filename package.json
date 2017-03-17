@@ -6,7 +6,7 @@
   "scripts": {
     "start": "python3 -m http.server; open http://localhost:8000",
     "test": "make --always-make",
-    "prepublish": "npm run test"
+    "prepublish": "yarn test"
   },
   "keywords": [
     "feram"

@@ -10,5 +10,8 @@ block content
 
     p.subtitle I find and fix bugs in git repositories
     
-  if features.repoInputField
-    include ./partials/git-repo-form.pug
+    if features.repoInputField
+      include ./partials/git-repo-form.pug
+      
+    if features.newsletterForm
+      include ./partials/newsletter-form.pug

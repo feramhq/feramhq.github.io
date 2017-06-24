@@ -1,6 +1,6 @@
-# Feram.co
+# Feram's Website
 
-Code for the website [feram.co](http://feram.co)
+Code for the website [feram.io](http://feram.io)
 
 All source files are located in `_source`.
 The underscore makes sure that jekyll ignores this directory

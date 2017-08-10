@@ -1,18 +1,18 @@
-# sourcePngs := $(wildcard _source/images/*.png)
 sourcePngs := $(wildcard _source/images/*.png)
 
 all: about/index.html \
+	getting-started/index.html \
 	images/logo.svg \
-	images/profile.svg \
 	images/modules \
+	images/profile.svg \
+	images/screenshots \
 	imprint/index.html \
 	index.html \
-	features/index.html \
 	pricing/index.html \
 	scripts/main.js \
-	login/index.html \
 	styles/screen.css
-
+	# features/index.html
+	# login/index.html
 
 styles/screen.css: ./_source/styles/* | styles
 	./node_modules/.bin/stylus ./_source/styles/screen.styl \
@@ -47,6 +47,10 @@ images/modules: _source/images/modules | images
 	rsync -a $< $(@D)
 	cd $@ && optipng -strip all *.png
 
+images/screenshots: _source/images/screenshots | images
+	rsync -a $< $(@D)
+	cd $@ && optipng -strip all *.png
+
 # images/favicon.png: _source/images/favicon.png | images
 # 	convert -background none $< $@
 
@@ -68,6 +72,7 @@ clean:
 		./login \
 		./index.html \
 		./features \
+		./getting-started \
 		./pricing \
 		./scripts \
 		./styles

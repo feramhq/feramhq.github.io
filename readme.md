@@ -1,4 +1,4 @@
-# Feram's Website
+# Feram's Website Typo: abbout
 
 Code for the website [feram.io](http://feram.io)
 

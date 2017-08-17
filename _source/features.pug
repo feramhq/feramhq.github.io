@@ -1,42 +1,67 @@
 extends partials/layout.pug
 
 block vars
-  - title = 'Feram - Features'
-  - active = 'features'
+  -
+    title = 'Feram - Features'
+    const active = 'features'
+    const programmingLanguages = [
+      'Text files',
+      'JavaScript',
+      'HTML',
+      'CSS',
+      'Python',
+      'Ruby',
+      'PHP',
+      'JSON',
+      'C',
+      'C++',
+      'C#',
+      'Objective C',
+      'D',
+      'Java',
+      'Pawn & VALA',
+    ]
 
 block content
-  main#modules
+  main#features
     section
-        h2 Modules
+      h2 Languages
+      
+      p.
+        Feram is capable of detecting and fixing bugs in following
+        programming languages and file types:
+        <br>
+        #{programmingLanguages.join(', ')}
+        
+      //- ul.programming-languages
+      //-   for language in programmingLanguages
+      //-     li= language
+    
+    section
+      h2 Modules
 
-        h3 Fixing
-        p.
-          This #{activeFixingModules.length} currently available
-          of #{fixingModules.length} planed fixing modules
-          automatically fix bugs in your code.
+      h3 Fixing
+      p.
+        Feram currently uses #{activeFixingModules.length} modules to
+        automatically fix bugs in your code.
+        <br>
+        #{fixingModules.length - activeFixingModules.length}
+        more are on the roadmap.
 
-        br
-
-        ul
-          for module in fixingModules
-            li(class=module.state)
-              div.checkmark
+      br
+      
+      ul.fixing-modules
+        for module in fixingModules
+          li(class=module.state)
+            div.checkmark
+            img(src=module.image)
+            if module.link
+              a(href=module.link)
+                div
+                  strong!= module.name
+                  p!= module.description
+            else
               div
-                strong= module.name
-                p= module.description
-
-
-        h3 Warning
-        p.
-          This #{warningModules.length} warning modules help you to easily
-          detect problems early.
-
-        br
-
-        ul
-          for module in warningModules
-            li(class=module.state)
-              img(src=module.image)
-              div
-                strong= module.name
-                p= module.description
+                strong!= module.name
+                p!= module.description
+              

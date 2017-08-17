@@ -10,8 +10,8 @@ all: about/index.html \
 	index.html \
 	pricing/index.html \
 	scripts/main.js \
-	styles/screen.css
-	# features/index.html
+	styles/screen.css \
+	features/index.html
 	# login/index.html
 
 styles/screen.css: ./_source/styles/* | styles
@@ -33,7 +33,8 @@ index.html: _source/index.pug _source/partials/*
 	mkdir -p $(@D)
 	./node_modules/.bin/pug --path $< < $< > $@
 
-features/index.html: _source/features.pug _source/partials/* _source/buildModules.js
+features/index.html: _source/data/* _source/features.pug \
+	_source/partials/* _source/buildModules.js
 	mkdir -p $(@D)
 	node _source/buildModules.js > $@
 

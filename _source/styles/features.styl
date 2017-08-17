@@ -1,73 +1,82 @@
-section
-  margin-left auto
-  margin-right auto
-  text-align left
-  max-width 40em
+#features
+  section
+    margin-left auto
+    margin-right auto
+    text-align left
 
-blockquote
-  border-left 2px solid lightgray
-  padding-left 1em
-  margin-bottom 1em
+  blockquote
+    border-left 2px solid lightgray
+    padding-left 1em
+    margin-bottom 1em
 
-ul
-  list-style-type none
+  ul.programming-languages
+    list-style-position inside
 
-.checkmark
-  align-self center
-  border 1px solid gray
-  min-width 2em
-  height 2em
-  text-align center
-  line-height 2em
-  border-radius 1em
-  margin-right 1em
+  backgroundGray = rgb(230, 230, 230)
 
-li
-  display flex
-  margin-bottom 1em
+  ul.fixing-modules
+    list-style-type none
 
-  strong
-    font-weight 500
-    font-size 1.2em
-    color rgb(180, 180, 180)
-    margin-bottom 0.5em
+    li
+      display flex
+      margin-bottom 1em
 
-  p
-    color rgb(180, 180, 180)
+      strong
+        font-weight 500
+        font-size 1.2em
+        color rgb(180, 180, 180)
+        margin-bottom 0.5em
 
-  img
-    opacity 0.3
-    max-width 4em
-    max-height 4em
-    margin-right 1em
+      p
+        color rgb(180, 180, 180)
 
-backgroundGray = rgb(230, 230, 230)
+      .checkmark
+        align-self center
+        border 1px solid gray
+        min-width 2em
+        height 2em
+        text-align center
+        line-height 2em
+        border-radius 1em
+        margin-right 1em
 
-.ready
-  p, strong
-    color black
+      img
+        opacity 0.3
+        max-width 4em
+        max-height 4em
+        margin-right 1em
+
+      a
+        text-decoration none
+        &:hover
+          text-decoration underline
+
+
+    .ready
+      p, strong
+        color black
+
+      code
+        background-color lighten(backgroundGray, 10%)
+        border-color lighten(backgroundGray, 5%)
+        color rgb(80, 80, 80)
+
+      img
+        opacity 1
+
+      .checkmark
+        background-color mainColor
+        border-color mainColorMuted
+        &::after
+          color mainColorMuted
+          content: '✔'
 
   code
-    background-color lighten(backgroundGray, 10%)
-    border-color lighten(backgroundGray, 5%)
-    color rgb(80, 80, 80)
-
-  img
-    opacity 1
-
-  .checkmark
-    background-color mainColor
-    border-color mainColorMuted
-    &::after
-      color mainColorMuted
-      content: '✔'
-
-code
-  background-color backgroundGray
-  border-color darken(backgroundGray, 5%)
-  border-radius 2px
-  border-style solid
-  border-width 1px
-  color rgb(150, 150, 150)
-  font-size 0.8em
-  padding 0.1em 0.4em
+    background-color backgroundGray
+    border-color darken(backgroundGray, 5%)
+    border-radius 2px
+    border-style solid
+    border-width 1px
+    color rgb(150, 150, 150)
+    font-size 0.8em
+    padding 0.1em 0.4em

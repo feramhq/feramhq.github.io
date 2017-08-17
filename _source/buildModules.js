@@ -6,21 +6,27 @@ const pug = require('pug')
 const parseYaml = (filePath) =>
   yaml.safeLoad(fs.readFileSync(path.join(__dirname, filePath)))
 
-const fixingModules = parseYaml('./data/fixing-modules.yaml').modules
-const warningModules = parseYaml('./data/warning-modules.yaml').modules
+const fixingModules = parseYaml('./data/fixing-modules.yaml')
+  .modules
   .map(module => {
-    module.image = module.image
-      ? `/images/modules/${module.image}.png`
-      : '/images/modules/default.png'
+    if (module.image) {
+      module.image = `/images/modules/${module.image}`
+      if (!module.image.includes('.')) {
+        module.image += '.png'
+      }
+    }
     return module
   })
+  .sort((moduleA, moduleB) => String(moduleA.state)
+    .localeCompare(String(moduleB.state))
+  )
 const activeFixingModules = fixingModules.filter(
   module => module.state === 'ready'
 )
-const getModulesHtml = pug.compileFile(path.join(__dirname, 'features.pug'))
+const getModulesHtml = pug
+  .compileFile(path.join(__dirname, 'features.pug'))
 
-console.log(getModulesHtml({
+console.info(getModulesHtml({
   fixingModules,
   activeFixingModules,
-  warningModules,
 }))

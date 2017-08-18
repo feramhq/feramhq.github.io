@@ -3,6 +3,7 @@ extends partials/layout.pug
 block vars
   - title = 'Feram - About'
   - active = 'about'
+  - imageWidth = 180
 
 block content
   #about
@@ -18,13 +19,13 @@ block content
     h2 Team
     #persons
       .person
-        img(src='https://gravatar.com/avatar/bdef220f4272ab4796c6ae65621481cf?s=180')
-        p Adrian Sieber
+        img(src=`https://gravatar.com/avatar/bdef220f4272ab4796c6ae65621481cf?s=${imageWidth}`)
+        p: strong Adrian Sieber
         p CEO
         p
           a.fa.fa-globe.fa-lg(href='https://adriansieber.com')
             span adriansieber.com
-          a.fa.fa-github.fa-lg(href='https://github.com/adius')
+          a.fa.fa-github-alt.fa-lg(href='https://github.com/adius')
             span GitHub
           a.fa.fa-twitter.fa-lg(href='https://twitter.com/adriansieber')
             span Twitter
@@ -34,17 +35,39 @@ block content
             span LinkedIn
 
       .person
-        img(src='https://gravatar.com/avatar/3a69a928e0f84578eec1b7e05f84e23d?s=180')
-        p Benjamin Karran
+        img(src=`https://gravatar.com/avatar/3a69a928e0f84578eec1b7e05f84e23d?s=${imageWidth}`)
+        p: strong Benjamin Karran
         p CTO
         p
           //- a.fa.fa-globe.fa-lg(href='https://benjamin.karran.eu')
           //-   span benjamin.karran.eu
-          a.fa.fa-github.fa-lg(href='https://github.com/ebekebe')
+          a.fa.fa-github-alt.fa-lg(href='https://github.com/ebekebe')
             span GitHub
           a.fa.fa-twitter.fa-lg(href='https://twitter.com/benjaminkarran')
             span Twitter
           a.fa.fa-facebook.fa-lg(href='https://facebook.com/jhyf67tygh864321')
             span Facebook
           a.fa.fa-linkedin.fa-lg(href='https://linkedin.com/in/benjamin-karran')
+            span LinkedIn
+
+      .person
+        img(src=`https://avatars1.githubusercontent.com/u/23526306?v=4&s=${imageWidth}`)
+        p: strong Simon Siegert
+        p Integration Engineer
+        p
+          a.fa.fa-github-alt.fa-lg(href='https://github.com/simsieg')
+            span GitHub
+
+      .person
+        img(src=`https://avatars1.githubusercontent.com/u/28337914?v=4&s=${imageWidth}`)
+        p: strong Lukas Zechel
+        p Business Developer
+        p
+          //- a.fa.fa-globe.fa-lg(href='https://benjamin.karran.eu')
+          //-   span benjamin.karran.eu
+          a.fa.fa-github-alt.fa-lg(href='https://github.com/zulechel')
+            span GitHub
+          a.fa.fa-twitter.fa-lg(href='https://twitter.com/lukas_zechel')
+            span Twitter
+          a.fa.fa-linkedin.fa-lg(href='https://linkedin.com/in/lukaszechel')
             span LinkedIn

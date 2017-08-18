@@ -46,7 +46,7 @@ block content
         automatically fix bugs in your code.
         <br>
         #{fixingModules.length - activeFixingModules.length}
-        more are on the roadmap.
+        more are on the short term roadmap.
 
       br
       
@@ -55,13 +55,14 @@ block content
           li(class=module.state)
             div.checkmark
             img(src=module.image)
-            if module.link
-              a(href=module.link)
-                div
-                  strong!= module.name
-                  p!= module.description
-            else
-              div
-                strong!= module.name
-                p!= module.description
+            div
+              strong!= module.name
+              p
+                != module.description
+                if module.link
+                  br
+                  small
+                    | More infos at 
+                    a(href=module.link)
+                      = module.link.replace(/^https?:\/\//, '')
               

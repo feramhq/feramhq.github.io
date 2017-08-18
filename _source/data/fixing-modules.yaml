@@ -3,6 +3,7 @@ modules:
     description: |
       Fix the 5000 most common typos and spelling mistakes.
     state: ready
+    link: https://github.com/feramhq/typokit
 
   - name: Fix Custom Typos
     description: Use additional dictionary generated from project files.
@@ -11,21 +12,25 @@ modules:
     description: |
       This vulnerability can lead to phishing and cross site scripting attacks.
     state: ready
+    link: https://mathiasbynens.github.io/rel-noopener
 
   - name: Add missing package file entries
     description: |
       Checks <code>package.json</code> files for missing entries and
       automatically adds them.
     state: ready
+    link: https://docs.npmjs.com/cli/init
 
   - name: Fix usage of indefinite articles
     description: No more incorrect usage of "a" and "an".
+    link: http://grammar-monster.com/lessons/an_or_a.htm
     state: ready
 
   - name: JSON Lint
     description: |
       A JSON parser and validator.
       No more inconsistent formatting and invalid keys.
+    link: https://github.com/zaach/jsonlint
     state: ready
     image: jsonlint.svg
 
@@ -216,6 +221,7 @@ modules:
     description: |
       Keep your Python code consistent with the
       Python Enhancement Proposal 8 (PEP 8) style conventions.
+    link: https://github.com/hhatto/autopep8
     image: python
     state: ready
 
@@ -231,8 +237,10 @@ modules:
     description: |
       This tool fixes most issues defined in the
       PHP standard recommendations PSR-1 and PSR-2.
+    link: http://cs.sensiolabs.org
     image: php_coding_standards_fixer
     state: ready
+
 
   - name: PHP Code Sniffer
     description: |

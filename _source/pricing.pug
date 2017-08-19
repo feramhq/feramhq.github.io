@@ -5,11 +5,13 @@ block vars
   - active = 'pricing'
 
 block content
-  h2 Coming Soon!
-  include ./partials/newsletter-form.pug
-
-  hr
-
+  h1.title Saving You Time &amp; Trouble
+  
+  p.subtitle
+    | Everyone makes mistakes, but Feram gots your back.
+    br
+    | It automatically finds &amp; fixes the bugs in your code.
+    
   table#comparisonTable
     caption Pricing
     thead
@@ -25,15 +27,15 @@ block content
         td Price
         td: strong 0 €
         td
-          strong 0.02 €
+          strong 0.1 €
           br
           small / commit
         td
-          strong 5 €
+          strong 9 €
           br
           small / user / month
         td
-          strong 10 €
+          strong 15 €
           br
           small / user / month
 
@@ -79,4 +81,8 @@ block content
         td
         td ✔
 
-  p All plans include unlimited repositories.
+  p.tableFootnote All plans include unlimited repositories.
+  
+  hr
+    
+  a.button.large.primary(href='/help/getting-started') Get Started Now

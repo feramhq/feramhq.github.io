@@ -30,7 +30,7 @@
     [getting started page](getting-started).
 
 - category: features
-  question: What kind of bugs can you fix?
+  question: What kind of bugs can Feram fix?
   answer: Check out the complete list on our [features page](/features).
 
 - category: features
@@ -38,6 +38,27 @@
   answer: |
     Yes!
     Please [contact us](/imprint) to get more information.
+
+- category: features
+  question: Does Feram support GitLab and Bitbucket?
+  answer: |
+    The APIs of GitLab and Bitbucket are still inferior to GitHub's
+    and they currently make it too expensive to
+    implement a great and seamless user experience.
+
+    If you are interested in an integration nevertheless
+    make sure to [contact us](/imprint).
+
+- category: features
+  question: Why does Feram only check commits in merge requests?
+  answer: |
+    Currently we need to recheck the whole repository for every commit,
+    because fixing just a subset of the code
+    could lead to inconsistet repositories.
+
+    As soon as our capabilities have somewhat stabilized
+    and we're confident we can handle the additional strain
+    on our infrastructure, we're also going to provide checks for every commit!
 
 - category: pricing
   question: How much does Feram cost?

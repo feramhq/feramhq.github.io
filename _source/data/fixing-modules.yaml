@@ -145,7 +145,7 @@ modules:
   - name: Ember Watson
     description: |
       Ember-watson finds bug-risk, security,
-      and compatability issues with your Ember apps,
+      and compatibility issues with your Ember apps,
       and tells you how to fix them
     type: warning
     image: ember_watson

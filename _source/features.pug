@@ -23,35 +23,31 @@ block vars
     ]
 
 block content
-  main#features
-    section
-      h2 Languages
-      
-      p.
-        Feram is capable of detecting and fixing bugs in following
-        programming languages and file types:
-        <br>
-        #{programmingLanguages.join(', ')}
-        
-      //- ul.programming-languages
-      //-   for language in programmingLanguages
-      //-     li= language
+  section
+    h2 Supported Languages
     
-    section
-      h2 Modules
-
-      h3 Fixing
-      p.
-        Feram currently uses #{activeFixingModules.length} modules to
-        automatically fix bugs in your code.
-        <br>
-        #{fixingModules.length - activeFixingModules.length}
-        more are on the short term roadmap.
-
-      br
+    p.
+      Feram is capable of detecting and fixing bugs in following
+      programming languages and file types:
+      #{programmingLanguages.join(', ')}
+  
+  section
+    h2 Tools We Run on Your Code
+    
+    p.
+      Feram currently uses #[strong #{activeFixingModules.length}] tools to
+      automatically fix bugs in your code.
+      <br>
+      More coming every week!
       
-      ul.fixing-modules
-        for module in fixingModules
+    //- #[strong #{fixingModules.length - activeFixingModules.length}]
+    //- more are on the short term roadmap.
+
+    br
+    
+    ul.fixing-modules
+      for module in fixingModules
+        if module.state == 'ready'
           li(class=module.state)
             div.checkmark
             img(src=module.image)

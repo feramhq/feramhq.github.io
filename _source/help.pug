@@ -1,0 +1,62 @@
+extends partials/layout.pug
+
+block vars
+  - 
+    title = 'Feram - Help'
+    active = 'help'
+    function toTitelCase (string) {
+      if (!string) return ''
+      return String(string).slice(0, 1).toUpperCase() +
+        String(string).slice(1)
+    }
+    function toSlug (string) {
+      if (!string) return ''
+      return encodeURIComponent(
+        string
+          .replace(/[\?]/g, '')
+          .replace(/ /g, '_')
+      )
+    }
+      
+
+block content
+  section
+    h2 Tutorials
+    
+    ul
+      li: a(href='getting-started') Getting Started
+        
+  
+  section
+    h2 FAQ
+    
+    p
+      | If you have a question which is not covered below,
+      | please contact us:
+    
+    ul
+      li: a(href='mailto:support@feram.io') Email support@feram.io
+      li: a(href='https://twitter.com/feramhq') Tweet @FeramHQ
+      li
+        a(href='tel:+491639860910') Call +491639860910
+        = ' '
+        small (08:00 - 20:00 UTC)
+       
+    for qAndA, index in questionsAndAnswers
+      - lastQAndA = questionsAndAnswers[index-1]
+      - category = toTitelCase(qAndA.category)
+      
+      if !lastQAndA
+        h3= category
+        != '<dl>'
+      else
+        if (lastQAndA.category !== qAndA.category)
+          != '</dl>'
+          h3= category
+          != '<dl>'
+        
+      dt.question(id=toSlug(qAndA.question))
+        = qAndA.question
+        = ' '
+        a(href='#' + toSlug(qAndA.question)) #
+      dd.answer!= qAndA.answer

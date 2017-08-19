@@ -37,25 +37,16 @@
         max-width 4em
         max-height 4em
         margin-right 1em
-        flex-
-
-      p
-        color rgb(180, 180, 180)
-        margin-bottom 0
-
-      strong
-        font-weight 500
-        font-size 1.2em
-        color rgb(180, 180, 180)
-        margin-bottom 0.5em
 
       small
         opacity 0.6
 
-    .ready
-      p, strong
-        color black
+      strong
+        font-weight 400
+        font-size 1.2em
+        margin-bottom 0.5em
 
+    li.ready
       code
         background-color lighten(backgroundGray, 10%)
         border-color lighten(backgroundGray, 5%)
@@ -65,11 +56,15 @@
         opacity 1
 
       .checkmark
-        background-color mainColor
         border-color mainColorMuted
         &::after
           color mainColorMuted
           content: '✔'
+
+    li:not(.ready)
+      p
+        margin-bottom 0
+
 
   code
     background-color backgroundGray

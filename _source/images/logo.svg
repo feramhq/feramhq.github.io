@@ -8,8 +8,8 @@
 
   <style>
     #bot {
-      stroke: rgb(100, 100, 100);
-      fill: rgb(100, 100, 100);
+      stroke: hsl(0, 0%, 30%);
+      fill: hsl(0, 0%, 30%);
     }
 
     #bot .antenna .tip {

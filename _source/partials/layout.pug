@@ -2,6 +2,7 @@
   let title = 'Feram'
   const features = {
     featuresPage: true,
+    helpPage: true,
     loginPage: false,
     repoInputField: false,
     newsletterForm: true,
@@ -26,7 +27,7 @@ html
     link(rel='icon' href='/images/logo.svg')
     script(src='/scripts/main.js')
 
-  body
+  body(id=active)
     .wrapper
       nav
         a#logo(href='/')
@@ -43,6 +44,12 @@ html
             href='/features'
             class= active === 'features' ? 'active' : ''
           ) Features
+
+        if features.helpPage
+          a(
+            href='/help'
+            class= active === 'help' ? 'active' : ''
+          ) Help
 
         a(
           href='/pricing'

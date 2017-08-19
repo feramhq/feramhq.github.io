@@ -1,7 +1,6 @@
 sourcePngs := $(wildcard _source/images/*.png)
 
 all: about/index.html \
-	getting-started/index.html \
 	images/logo.svg \
 	images/modules \
 	images/profile.svg \
@@ -11,7 +10,9 @@ all: about/index.html \
 	pricing/index.html \
 	scripts/main.js \
 	styles/screen.css \
-	features/index.html
+	features/index.html \
+	help/index.html \
+	help/getting-started/index.html
 	# login/index.html
 
 styles/screen.css: ./_source/styles/* | styles
@@ -33,10 +34,15 @@ index.html: _source/index.pug _source/partials/*
 	mkdir -p $(@D)
 	./node_modules/.bin/pug --path $< < $< > $@
 
-features/index.html: _source/data/* _source/features.pug \
-	_source/partials/* _source/buildModules.js
+features/index.html: _source/data/fixing-modules.yaml _source/features.pug \
+	_source/partials/* _source/helpers/buildModules.js
 	mkdir -p $(@D)
-	node _source/buildModules.js > $@
+	node _source/helpers/buildModules.js > $@
+
+help/index.html: _source/data/questions-and-answers.yaml _source/help.pug \
+	_source/partials/* _source/helpers/buildFaq.js
+	mkdir -p $(@D)
+	node _source/helpers/buildFaq.js > $@
 
 images/%.svg: _source/images/%.svg ./node_modules/svgo | images
 	./node_modules/.bin/svgo $< $@
@@ -68,12 +74,13 @@ images:
 clean:
 	-rm -r \
 		./about \
-		./images \
-		./imprint \
-		./login \
-		./index.html \
 		./features \
 		./getting-started \
+		./help \
+		./images \
+		./imprint \
+		./index.html \
+		./login \
 		./pricing \
 		./scripts \
 		./styles

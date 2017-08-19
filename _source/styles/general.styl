@@ -14,8 +14,7 @@ body
   font-family Helvetica, sans-serif
   font-weight 100
   line-height 1.4
-  background-color slightlyMutedBgColor
-  color mutedContrastColor
+  color slightlyMutedFgColor
 
 label
   display: none
@@ -50,21 +49,43 @@ nav
     font-weight 900
 
 h1
-  font-size 1.8em
+  color primaryColorMuted
+  font-size 2em
+  font-weight 100
   margin-bottom 1rem
-  border-bottom 1px solid lightgray
+  border-bottom 1px solid mutedBgColor
 
 h2
+  color primaryColorMuted
   font-size 1.5em
+  font-weight 100
   margin-bottom 1rem
-  border-bottom 1px solid lightgray
+  border-bottom 1px solid mutedBgColor
+
+h3
+  color primaryColorMuted
+  font-size 1.3em
+  font-weight 100
+  margin-bottom 0.8rem
+  border-bottom 1px solid mutedBgColor
 
 p
   margin-bottom 0.8em
+  color mutedFgColor
 
 p + h2,
+ul + h2,
+ol + h2,
+dl + h2,
+p + h3,
+ul + h3,
+ol + h3,
+dl + h3,
 p + section
   margin-top 2em
+
+a
+  color hsl(190, 80%, 30%)
 
 small
   font-size 0.8em
@@ -81,6 +102,12 @@ main
   padding-bottom 4em
   padding-right 1em
 
+.wrapper
+  min-height 100%
+  background-color white
+  margin 0 auto
+  width 100%
+
 section
   margin-bottom 2em
 
@@ -93,7 +120,7 @@ button,
   border-style solid
   border-radius 0.3em
   border-color mutedBgColor
-  color mutedContrastColor
+  color mutedFgColor
   display inline-block
   padding 0.5em 1.6rem
 
@@ -109,14 +136,12 @@ button,
   cursor pointer
   text-decoration none
 
-dt
-  display inline-block
-  margin-right 1em
-  width 5em
-  text-align right
-
-dd
-  display inline-block
-
 img
   max-width 100%
+
+ul
+  list-style-position inside
+
+:target
+   background-color hsl(50, 100%, 80%)
+   padding 0.1em 0.5em

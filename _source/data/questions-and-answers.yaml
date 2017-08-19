@@ -1,0 +1,48 @@
+- category: general
+  question: What is Feram?
+  answer: |
+    Feram is a Service which finds bugs in your merge requests
+    and automatically generates patches for those bugs.
+    You then can step through the patches and decide which ones
+    you want to apply
+    and they are automatically committed to your merge request.
+
+- category: general
+  question: How does Feram work?
+  answer: |
+    Feram is a [GitHub App](https://github.com/apps/feram)
+    which seamlessly integrates in your GitHub merge request workflow.
+
+    Every time a new merge request is opened, or new commits are pushed
+    into an existing merge request Feram gets notified and
+    automatically downloads the latest changes.
+    It then uses state of the art open source tools to detect bugs in your code.
+    (Check out the full list on our [features page](/features).)
+    If any bugs were found we block the merge request and post a link
+    to feram where you can select which patches you want
+    to apply and which you want to discard.
+
+    After making your selection we commit the relevant patches and
+    push them onto your merge request branch.
+    The merge request can then be merged.
+
+    For a detailed tutorial on how to get started check out the
+    [getting started page](getting-started).
+
+- category: features
+  question: What kind of bugs can you fix?
+  answer: Check out the complete list on our [features page](/features).
+
+- category: features
+  question: Does Feram support GitHub Enterprise?
+  answer: |
+    Yes!
+    Please [contact us](/imprint) to get more information.
+
+- category: pricing
+  question: How much does Feram cost?
+  answer: |
+    Feram is free for public repositories and free for occasional
+    checks of personal private repositories.
+    If you are a company and/or want to use Feram on a regular basis
+    please check out our detailed [pricing page](/pricing).

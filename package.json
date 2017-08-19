@@ -29,7 +29,8 @@
   },
   "homepage": "https://github.com/adius/ferambot.github.io#readme",
   "dependencies": {
-    "js-yaml": "^3.6.1",
-    "pug": "^2.0.0-beta6"
+    "js-yaml": "^3.9.1",
+    "marked": "^0.3.6",
+    "pug": "^2.0.0-rc.3"
   }
 }

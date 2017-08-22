@@ -1,11 +1,11 @@
 - category: general
   question: What is Feram?
   answer: |
-    Feram is a Service which finds bugs in your merge requests
+    Feram is a service which finds bugs in your merge requests
     and automatically generates patches for those bugs.
-    You then can step through the patches and decide which ones
-    you want to apply
-    and they are automatically committed to your merge request.
+    Afterwards you can step through the patches and decide which ones
+    you want to apply.
+    Finally, the selected patches are committed to your merge request.
 
 - category: general
   question: How does Feram work?
@@ -14,16 +14,18 @@
     which seamlessly integrates in your GitHub merge request workflow.
 
     Every time a new merge request is opened, or new commits are pushed
-    into an existing merge request Feram gets notified and
+    into an existing merge request, Feram gets notified and
     automatically downloads the latest changes.
     It then uses state of the art open source tools to detect bugs in your code.
     (Check out the full list on our [features page](/features).)
-    If any bugs were found we block the merge request and post a link
-    to feram where you can select which patches you want
-    to apply and which you want to discard.
 
-    After making your selection we commit the relevant patches and
-    push them onto your merge request branch.
+    If any bugs were found Feram blocks the merge request and posts a link
+    to the results of the code check.
+    There you can select which patches you want to apply
+    and which you want to discard.
+
+    After making your selection Feram commits the relevant patches
+    and pushes them onto your merge request branch.
     The merge request can then be merged.
 
     For a detailed tutorial on how to get started check out the
@@ -43,22 +45,21 @@
   question: Does Feram support GitLab and Bitbucket?
   answer: |
     The APIs of GitLab and Bitbucket are still inferior to GitHub's
-    and they currently make it too expensive to
+    and they currently make it too hard for us to
     implement a great and seamless user experience.
 
-    If you are interested in an integration nevertheless
+    Thath said, if you are interested in an integration
     make sure to [contact us](/imprint).
 
 - category: features
   question: Why does Feram only check commits in merge requests?
   answer: |
-    Currently we need to recheck the whole repository for every commit,
+    Currently Feram needs to recheck the whole repository for every commit,
     because fixing just a subset of the code
-    could lead to inconsistet repositories.
+    could lead to inconsistent repositories.
 
-    As soon as our capabilities have somewhat stabilized
-    and we're confident we can handle the additional strain
-    on our infrastructure, we're also going to provide checks for every commit!
+    As soon Feram supports incremental checks
+    we will also enable checks for every commit!
 
 - category: pricing
   question: How much does Feram cost?
@@ -66,4 +67,4 @@
     Feram is free for public repositories and free for occasional
     checks of personal private repositories.
     If you are a company and/or want to use Feram on a regular basis
-    please check out our detailed [pricing page](/pricing).
+    please check out our [pricing page](/pricing).

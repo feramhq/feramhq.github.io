@@ -48,13 +48,13 @@
     and they currently make it too hard for us to
     implement a great and seamless user experience.
 
-    Thath said, if you are interested in an integration
+    That said, if you are interested in an integration
     make sure to [contact us](/imprint).
 
 - category: features
   question: Why does Feram only check commits in merge requests?
   answer: |
-    Currently Feram needs to recheck the whole repository for every commit,
+    Currently, Feram needs to recheck the whole repository for every commit,
     because fixing just a subset of the code
     could lead to inconsistent repositories.
 

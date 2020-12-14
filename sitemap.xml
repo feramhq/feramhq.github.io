@@ -17,4 +17,14 @@
   <changefreq>weekly</changefreq>
   <priority>0.6</priority>
 </url>
+<url>
+  <loc>https://feram.io/hub/</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://feram.io/privacy/</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.4</priority>
+</url>
 </urlset>

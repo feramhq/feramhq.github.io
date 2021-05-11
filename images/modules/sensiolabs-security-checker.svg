@@ -1,1 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect ry="10" rx="10" height="100" width="100"/><text y="1.4em" font-size="25" font-weight="600" font-family="'Arial',sans-serif"><tspan x="10" fill="#fff"> Sensio </tspan> <tspan x="30" dy="1em" fill="#82e73e"> Labs </tspan></text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect ry="10" rx="10" height="100" width="100" style="fill:#000"/><text y="1.4em" style="font-size:25px;font-weight:600;font-family:'Arial',sans-serif">
+      <tspan x="10" style="fill:#fff">
+        Sensio
+      </tspan>
+      <tspan x="30" dy="1em" style="fill:#82e73e">
+        Labs
+      </tspan>
+   </text></svg>

@@ -1,1 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect rx="10" ry="10" height="100" width="100" fill="#ff6c6c"/><text y="1.8em" font-size="22" font-weight="600" font-family="'Source Code Pro',monospace"><tspan x="10"> target </tspan> <tspan x="10" dy="1.4em"> blank </tspan></text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect rx="10" ry="10" height="100" width="100" style="fill:#ff6c6c"/><text y="1.8em" style="font-size:22px;font-weight:600;font-family:'Source Code Pro',monospace">
+      <tspan x="10">
+        target
+      </tspan>
+      <tspan x="10" dy="1.4em">
+        blank
+      </tspan>
+   </text></svg>

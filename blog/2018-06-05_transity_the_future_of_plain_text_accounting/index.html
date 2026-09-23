@@ -8,17 +8,17 @@
 <p>For example you first get 50 € from Anna and then you buy some food for 20 €.</p>
 <table>
 <thead>
-<tr class="header">
+<tr>
 <th>Account</th>
 <th>Amount</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td>Cash on hand</td>
 <td>50.00 €</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Cash on hand</td>
 <td>-20.00 €</td>
 </tr>
@@ -27,19 +27,19 @@
 <p>In order to simplify adding up the values with pen on paper (!), accountants started to use separate columns for debit and credit.</p>
 <table>
 <thead>
-<tr class="header">
+<tr>
 <th>Account</th>
 <th>Debit</th>
 <th>Credit</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td>Cash on hand</td>
 <td>50.00 €</td>
 <td></td>
 </tr>
-<tr class="even">
+<tr>
 <td>Cash on hand</td>
 <td></td>
 <td>20.00 €</td>
@@ -49,29 +49,29 @@
 <p>Simple, but also incomplete. Where did the money come from? Where did it go? This led to double entry bookkeeping. Whenever you add some money to an account you have to remove the same amount from another one.</p>
 <table>
 <thead>
-<tr class="header">
+<tr>
 <th>Account</th>
 <th>Debit</th>
 <th>Credit</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td>Cash on hand</td>
 <td>50.00 €</td>
 <td></td>
 </tr>
-<tr class="even">
+<tr>
 <td>Anna</td>
 <td></td>
 <td>50.00 €</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Food</td>
 <td>20.00 €</td>
 <td></td>
 </tr>
-<tr class="even">
+<tr>
 <td>Cash on hand</td>
 <td></td>
 <td>20.00 €</td>
@@ -81,24 +81,24 @@
 <p>But you <strong>must never forget a posting</strong>, cause otherwise your accounts won't balance.</p>
 <table>
 <thead>
-<tr class="header">
+<tr>
 <th>Account</th>
 <th>Debit</th>
 <th>Credit</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td>Cash on hand</td>
 <td>50.00 €</td>
 <td></td>
 </tr>
-<tr class="even">
+<tr>
 <td>Anna</td>
 <td></td>
 <td>50.00 €</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Cash on hand</td>
 <td></td>
 <td>20.00 €</td>
@@ -110,19 +110,19 @@
 <p>So how can we simplify it? It's actually quite easy: We just have to model it in terms of transactions, and not accounts.</p>
 <table>
 <thead>
-<tr class="header">
+<tr>
 <th>From</th>
 <th>To</th>
 <th>Amount</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td>Anna</td>
 <td>Cash on hand</td>
 <td>50 €</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Cash on hand</td>
 <td>Food</td>
 <td>20 €</td>
